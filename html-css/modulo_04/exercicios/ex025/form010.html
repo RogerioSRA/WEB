@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário</title>
+    </head>
+    <body>
+        <h1>Exemplo de Formulário</h1>
+        <form action="" method="post" autocomplete="on">
+            <p>
+                <label for="iano">Em que ano você nasceu? </label>
+                <input type="number" name="ano" id="iano" min="1900" max="2023" oninput="ires.innerHTML = 2023 - Number(iano.value)" onchange="Calcidade()">
+
+
+
+                <p>
+                    <label for="ires">Sua idade hoje (OutPut): </label>
+                    <output name="res" id="ires">0</output>
+                </p>
+                <p>
+                    <label for="iresJ">Sua idade hoje (JavaScript): </label>
+                    <output name="resJ" id="iresJ">0</output>
+                </p>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </form>        
+    </body>
+    <script>
+        function Calcidade()
+        {
+            let atual = new Date().getFullYear();
+            iresJ.innerHTML = atual - Number(iano.value)
+        }
+
+    </script>
+</html>

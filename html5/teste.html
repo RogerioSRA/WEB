@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste JavaScript</title>
+</head>
+<body>
+    <h1>Testando JavaScript</h1>
+    <script>
+        document.write("Deus é excelente !");
+        document.writeln("Hoje é dia " + Date());
+    </script>
+
+    <script>
+        var quebrada = false;
+        function mudaLampada(tipo)
+        {
+            if(!quebrada)
+            {
+                document.getElementById("luz").src="projetoGoogleGlass/_imagens/"+tipo+".jpg";
+                if(tipo=='lampada-quebrada')
+                {
+                    quebrada = true;
+                }
+            }
+            
+        }
+    </script>
+    <img src="projetoGoogleGlass/" alt="">
+    <img src="projetoGoogleGlass/_imagens/icone-mensagem.png" alt="">
+    <h1>Acenda a Lâmpada</h1>
+    <img src="projetoGoogleGlass/_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')"/>
+    
+</body>
+</html>
