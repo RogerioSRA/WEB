@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Primeiros Passos Com DOM</title>
+        <style>
+            body{
+                background-color: rgba(0, 0, 200, 0.4);
+                color: rgba(255, 255, 255, 1);
+                font: normal 20px arial;;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="h1">Iniciando estudos com DOM</h1>
+        <p>Aqui vai o resultado</p>
+        <p>Aprendendo a usar o <strong>DOM</strong> em Javascript. </p>
+        <div id="msn">Clique em mim</div>
+
+        <script>
+            var corpo = window.document.body;
+            corpo.style.background='rgba(0, 0, 100, 1';
+
+            let p1 = document.getElementsByTagName('p')[1];
+
+            // Texto sem formatação.
+            window.document.write(p1.innerText+'<br/>');
+            p1.style.color='rgba(100, 200, 200, 1';
+
+            // Texto com formatação.
+            window.document.write(p1.innerHTML+'<br/>');
+
+            var msn = window.document.getElementById('msn');
+            msn.style.background='rgba(0, 255, 0, 1)';
+            msn.style.color='rgba(0, 0, 0, 1)';
+            msn.innerText="Estou Aguardando....";
+
+            //OU...
+
+            window.document.getElementById('msn').innerText = 'Já mudou de novo ...';
+
+            let h = window.document.querySelector('h1#h1');
+            h.style.background = 'rgba(255, 0, 0, 1';
+            h.innerText = 'Testando por conta...'
+        </script>
+    </body>
+</html>

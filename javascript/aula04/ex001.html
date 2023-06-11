@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Meu Primeiro programa ...</title>
+        <style>
+            body{
+                background-color: rgba(64, 245, 48,0.5);
+                color: rgba(0, 0, 0, 1);
+                font: normal 20px arial;
+            }
+            p{
+                color: rgba(0, 0, 125, 1);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Deus é Amor</h1>
+        <p>Não existe maldição para aqueles que estão em Cristo Jesus ...</p>
+        
+
+        <script>
+            //ALERTAS
+            window.alert("Minha primeira mensagem");
+
+            //CONFIRMAÇÕES == OK - CANCELA
+            let res = window.confirm("Está gostando de JS ?");
+            if (res == true)
+            {
+                window.alert("(OK) Verdadeiro");
+            }else{
+                window.alert('(CANCELAR) Falso');
+            }
+
+            //PERGUNTAS == OK
+            window.prompt("Qual é o seu nome ?");
+        </script>
+    </body>
+</html>

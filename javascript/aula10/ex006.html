@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            background-color: rgba(0, 100, 0, 1);
+            color: rgba(255, 255, 255, 1);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        div#teste{
+            margin-top: 100px;
+            background-color: rgba(100, 0, 0, 1);
+            color: rgba(255, 255, 255, 1);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        div "area" com os comandos de MOUSE já incluídos.
+     -->
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        interaja
+    </div>
+    <!-- 
+        div "teste" sem os comandos de MOUSE inclusos.
+        feitos de forma posterior em JavaScript.
+     -->
+    <div id="teste">
+        interaja
+    </div>
+    <script>
+        /*
+        variavel "a" e "t" sendo colocadas
+        fora das 'FUNCTIONS' para
+        terem alcance global.
+        */
+        let a = window.document.getElementById("area");
+        function clicar()
+        {
+            a.style.background="rgba(0, 255, 255, 1)";
+            a.style.color="rgba(0, 0, 0, 1)";
+            a.innerText="Clicou  !!!"
+        }
+        function entrar()
+        {
+            a.innerText="Entrou !!!"
+        }
+        function sair()
+        {
+            a.innerHTML="Saiu !!!"
+        }        
+
+        // Eventos automáticos, sem cliques do mouse, para a ID="teste"
+        let t = windo.document.getElementById("teste");
+        t.addEventListener('click', clicar1);
+        t.addEventListener('mouseenter', entrar1);
+        t.addEventListener('mouseout', sair1);
+        function clicar1()
+        {
+            t.style.background="rgba(0, 255, 255, 1)";
+            t.style.color="rgba(0, 0, 0, 1)";
+            t.innerText="Clicou  !!!"
+        }
+        function entrar1()
+        {
+            t.innerText="Entrou !!!"
+        }
+        function sair1()
+        {
+            t.innerHTML="Saiu !!!"
+        }
+    </script>
+</body>
+</html>

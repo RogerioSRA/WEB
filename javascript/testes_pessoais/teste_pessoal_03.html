@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="imagens"></div>
+        <!-- 
+            Acrescentando imagem ao HTML através do Javascript 
+        -->
+    </body>
+
+    <script>        
+            let div = document.getElementById("imagens");
+            
+            let image = document.createElement("img");
+
+            // OU
+
+            image = new Image (200,150);// width e height; opcionais, pois podem ficar os parênteses vazios.
+            image.src = ("../aula12_ex/ex015/imagens/femAdulta.jpeg");            
+            div.appendChild(image);
+    </script>
+</html>

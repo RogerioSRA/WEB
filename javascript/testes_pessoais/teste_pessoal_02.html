@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            p#r1{
+                position: relative;
+                display: block;
+                left: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="r1">TESTE</p>
+
+        <script>
+            let letra = document.querySelector("p#r1");
+            // letra.innerHTML = (letra.style.left);
+            if (letra.style.left == 0)
+            {
+                let vai = 1;
+                let vem = 0;
+                let pos = vem;
+                letra.innerHTML = (vai);
+            }
+            if (letra.style.left == 500)
+            {
+                let vai = 0;
+                let vem = 1;
+                let pos = 500;
+                letra.innerHTML = (vem);
+            }
+            if (vai == 1)
+            {
+                pos += 1;
+                letra.style.left = pos+'px';
+                letra.innerHTML = (pos);
+            }
+            // if (vem == 1)
+            // {
+            //     pos -= 1;
+            //     letra.style.left = pos+'px';
+            // }
+            // Muda();
+            
+            // function Muda()
+            // {
+            //     pos = 0;
+
+            //     while (pos < 500)
+            //     {
+            //         letra.style.left = pos+'px';
+            //         letra.innerHTML = ('indo');
+            //         pos ++
+            //     }
+            //     while (pos > 0)
+            //     {
+            //         letra.style.left = pos+'px';
+            //         letra.innerHTML = ('voltando');
+            //         pos --
+            //     }                
+            //     letra.innerHTML = (pos);
+            // }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p>[TAGS] getElementsByTagName > MARCA p(0)</p>
+        <p>[TAGS] getElementsByTagName > MARCA p(1)</p>
+        <p id="testeID">getElementById > ID</p>
+        <p name="testeNAME">getElementsByName > NOME</p>
+        <p class="testeCLASS">getElementsByClassName > CLASSE (0)</p>
+        <p class="testeCLASS">getElementsByClassName > CLASSE (1)</p>
+        <p id="query">[QUERY] getElementsByquerySelector > SELETOR</p>
+        <p class="queries">[QUERY] getElementsByquerySelectorAll > SELETOR (0)</p>
+        <p class="queries">[QUERY] getElementsByquerySelectorAll > SELETOR (1)</p>
+
+        <script>
+            let letra = document.getElementsByTagName('p')[0];
+            frase="TagName (0)";
+            Muda();
+
+            letra = document.getElementsByTagName('p')[1];
+            frase="TagName (1)";
+            Muda();
+
+            letra = document.getElementById('testeID');
+            frase="ID";
+            Muda();
+
+            letra = document.getElementsByName('testeNAME')[0];
+            frase="NAME";
+            Muda();
+
+            letra = document.getElementsByClassName('testeCLASS')[0]; frase="ClassName (0)";
+            Muda();
+
+            letra = document.getElementsByClassName('testeCLASS')[1]; frase="ClassName (1)";
+            Muda();
+
+            letra = document.querySelector('p#query'); frase="Query Selector";
+            Muda();
+
+            letra = document.querySelectorAll('p.queries')[0]; frase="Query Selector All (0)";
+            Muda();
+
+            letra = document.querySelectorAll('p.queries')[1]; frase="Query Selector All (1)";
+            Muda();
+            
+            function Muda()
+            {
+                letra.innerHTML = (frase);
+            }
+        </script>
+    </body>
+</html>
